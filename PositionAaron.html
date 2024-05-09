@@ -59,11 +59,18 @@
             ticks: {
               stepSize: 1,
               maxTacksLimit: 17,
-              callback: function(value, index, values) {
-                return value;
-              }
-            }
-          }
+              
+  callback: function(value, index, values) {
+    if (value === 1) {
+      return '🏆 ' + value;
+    } else {
+      return value;
+    }
+  }
+}
+              
+            
+          
         },
         plugins: {
           tooltip: {
